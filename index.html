@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hero to Zero</title>
+  <style>
+    :root{
+      --bg1:#1e3c72; --bg2:#2a5298;
+      --white:#fff;
+      --friday:#f97316; --sat:#22c55e; --view:#3b82f6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font:500 16px/1.5 system-ui,Segoe UI,Roboto,Inter,Arial;
+      color:var(--white);
+      background:linear-gradient(135deg,var(--bg1),var(--bg2));
+      display:flex; align-items:center; justify-content:center;
+      padding:20px;
+    }
+    .wrap{width:100%; max-width:520px; text-align:center}
+    h1{margin:0 0 24px; font-size:clamp(28px,4.5vw,44px); letter-spacing:1px}
+    .stack{display:flex; flex-direction:column; gap:14px}
+    button{
+      width:100%; max-width:420px; margin:0 auto;
+      padding:14px 18px; border:0; border-radius:12px;
+      color:#fff; font-size:clamp(16px,2.8vw,20px); font-weight:700;
+      cursor:pointer; transition:transform .15s ease, opacity .15s ease;
+      display:block;
+    }
+    button:hover{transform:translateY(-1px)}
+    button:active{transform:translateY(0); opacity:.9}
+    .friday{background:var(--friday)}
+    .saturday{background:var(--sat)}
+    .view{background:var(--view)}
+    /* Small helpers for very narrow phones */
+    @media (max-width:360px){
+      .wrap{max-width:94vw}
+      button{border-radius:10px; padding:12px}
+    }
+  </style>
+</head>
+<script>
+  // Make the Apps Script endpoint available to all pages
+  localStorage.setItem(
+    'H2Z_ENDPOINT',
+    'https://script.google.com/macros/s/AKfycbyDxltzhBGlSsbZrttqIhmh3z_tiVcBZ7A1Obepw3vuxRLtb7WhtXVpa6xGSrzI7xjC/exec'
+  );
+</script>
+
+<body>
+  <main class="wrap">
+    <h1>Hero to Zero</h1>
+    <div class="stack">
+      <button class="friday"   onclick="location.href='friday.html'">Friday</button>
+      <button class="saturday" onclick="location.href='saturday.html'">Saturday</button>
+      <button class="view"     onclick="location.href='view.html'">View Scores</button>
+    </div>
+  </main>
+</body>
+</html>

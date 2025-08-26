@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Friday — Hero to Zero</title>
+  <style>
+    :root{
+      --bg1:#0f2027; --bg2:#2c5364; --white:#fff;
+      --station:#ef4444; --carnival:#f59e0b; --haflet:#10b981; --mahfozat:#3b82f6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font:500 16px/1.5 system-ui,Segoe UI,Roboto,Inter,Arial;
+      color:var(--white);
+      background:linear-gradient(135deg,var(--bg1),var(--bg2));
+      display:flex; align-items:center; justify-content:center;
+      padding:20px;
+    }
+    .wrap{width:100%; max-width:560px; text-align:center}
+    h1{margin:0 0 24px; font-size:clamp(24px,4vw,36px)}
+    .stack{display:flex; flex-direction:column; gap:14px}
+    button{
+      width:100%; max-width:440px; margin:0 auto;
+      padding:14px 18px; border:0; border-radius:12px;
+      color:#fff; font-size:clamp(16px,2.8vw,20px); font-weight:700;
+      cursor:pointer; transition:transform .15s ease, opacity .15s ease;
+      display:block;
+    }
+    button:hover{transform:translateY(-1px)}
+    button:active{transform:translateY(0); opacity:.9}
+    .station{background:var(--station)}
+    .carnival{background:var(--carnival)}
+    .haflet{background:var(--haflet)}
+    .mahfozat{background:var(--mahfozat)}
+    .back{margin-top:10px; font-size:14px; opacity:.9}
+    .back a{color:#e5e7eb; text-decoration:underline}
+    @media (max-width:360px){
+      .wrap{max-width:94vw}
+      button{border-radius:10px; padding:12px}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Friday Events</h1>
+<div class="stack">
+  <button class="station" onclick="location.href='friday_station.html'">Station</button>
+  <button class="carnival" onclick="location.href='friday_carnival.html'">Carnival</button>
+  <button class="haflet"   onclick="location.href='friday_summer.html'">Haflet el Summer</button>
+  <button class="mahfozat" onclick="location.href='friday_mahfozat.html'">Mahfozat</button>
+</div>
+
+    <p class="back"><a href="index.html">← Back</a></p>
+  </main>
+</body>
+</html>
